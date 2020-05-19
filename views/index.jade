@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  div
+    table
+     thead
+       tr: th Links
+     tbody
+       each link in links
+         tr
+           td
+             a(href=link.value) #{link.value}
+           td
+             a(href="/" + link.key) #{link.key}
